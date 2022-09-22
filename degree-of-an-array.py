@@ -15,4 +15,5 @@ class Solution:
                 start[num] = i
             end[num] = i
         max_freq = max(count.values())
+
         return min(end[num]-start[num]+1 for num, freq in count.items() if freq == max_freq)

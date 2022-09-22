@@ -1,0 +1,38 @@
+STUDY PLAN
+    ALGORITHM 1 -------------------->
+    ALGORITHM 2 -------------------->
+    ALGORITHM 3 -------------------->
+
+    PROGRAMMING SKILLS 1 -----------> DONE
+    PROGRAMMING SKILLS 2 ----------->
+    PROGRAMMING SKILLS 3 ----------->
+
+    LEETCODE 75 LEVEL 1 ------------>
+    LEETCODE 75 LEVEL 2 ------------>
+    LEETCODE 75 LEVEL 3 ------------>
+
+    DATA STRUCTURE 1 ---------------> DONE
+    DATA STRUCTURE 2 --------------->
+    DATA STRUCTURE 3 --------------->
+
+    DYNAMIC PROGRAMMING 1 ---------->
+    DYNAMIC PROGRAMMING 2 ---------->
+    DYNAMIC PROGRAMMING 3 ---------->
+    DYNAMIC PROGRAMMING 4 ---------->
+
+    GRAPH THEORY 1 ----------------->
+    GRAPH THEORY 2 ----------------->
+
+    SQL 1 --------------------------> DONE
+    SQL 2 -------------------------->
+    SQL 3 -------------------------->
+
+    BINARY SEARCH 1 ---------------->
+    BINARY SEARCH 2 ---------------->
+    BINARY SEARCH 3 ---------------->
+
+EXPLORE
+    Top Interview Questions
+        EASY COLLECTION ------------> DONE
+        MEDIUM COLLECTION ---------->
+        HARD COLLECTION ------------>

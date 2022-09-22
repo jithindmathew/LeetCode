@@ -1,6 +1,6 @@
 # 1180
 
-def countLetters(S: str) -> int:  # TODO 
+def countLetters(S: str) -> int:
 
     if S == "":
         return 0

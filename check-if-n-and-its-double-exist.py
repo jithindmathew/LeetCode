@@ -17,7 +17,7 @@ class Solution:
         return False
 
 
-""" 
+"""
 class Solution:
     def checkIfExist(self, arr: List[int]) -> bool:
         hashset = set()
@@ -26,5 +26,4 @@ class Solution:
                 return True
             hashset.add(i)
         return False
-                
 """

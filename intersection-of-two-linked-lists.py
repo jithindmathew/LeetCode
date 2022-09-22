@@ -4,22 +4,23 @@ class ListNode:
         self.val = x
         self.next = None
 
+
 class Solution:
-    def getIntersectionNode(self,headA: ListNode, headB: ListNode) -> ListNode:
-        
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
+
         curra = headA
         currb = headB
-        
+
         while curra != currb:
             if curra:
                 curra = curra.next
             else:
                 curra = headB
-                
+
             if currb:
                 currb = currb.next
             else:
                 currb = headA
-            
+
         return currb
-        
+

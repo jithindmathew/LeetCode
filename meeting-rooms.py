@@ -8,6 +8,7 @@ len(intervals[i]) = 2
 0 <= intervals[i][0] < intervals[i][1] <= 1000000
 """
 
+
 def canAttendMeetings(intervals: List[List[int]]) -> bool:
 
     ans = [True]*1000000
@@ -17,11 +18,12 @@ def canAttendMeetings(intervals: List[List[int]]) -> bool:
         
         for j in range(x, y):
 
-            if ans[j] == True:
+            if ans[j] is True:
                 ans[j] = False
             else:
                 return False
     
     return True
+
 
 print(canAttendMeetings([[4, 9], [2, 4], [9, 20], [20, 88]]))
