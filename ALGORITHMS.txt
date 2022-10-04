@@ -1,0 +1,2 @@
+Manacher's Algorithm
+Sieve of Eratosthenes

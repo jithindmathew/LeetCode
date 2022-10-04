@@ -9,4 +9,4 @@ class Solution:
             i += 1
         return i - 1
         """
-        return int(sqrt(2*n + 0.25) - 0.5)
+        return int(sqrt(2 * n + 0.25) - 0.5)

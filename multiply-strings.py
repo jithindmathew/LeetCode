@@ -2,36 +2,39 @@ class Solution:
     def multiply(self, n1: str, n2: str) -> str:
         if n1 == '0' or n2 == '0':
             return '0'
+
         ans = [0] * (len(n1) + len(n2))
 
-        multiplier = 0
+        for i in range(len(n1) - 1, -1, -1):
+            for j in range(len(n2) - 1, -1, -1):
+                digit = (ord(n1[i]) - ord('0')) * \
+                        (ord(n2[j]) - ord('0'))
 
-        def add(temp_, multiplier_):
-            ans[-1 - multiplier_] += temp_
+                ans[len(n1) + len(n2) - i - j - 2] += digit
+                ans[len(n1) + len(n2) - i - j - 1] += ans[len(n1) + len(n2) - i - j - 2] // 10
+                ans[len(n1) + len(n2) - i - j - 2] = ans[len(n1) + len(n2) - i - j - 2] % 10
 
-            # reorganising array
+        start = len(n1) + len(n2) - 1
 
-            index = -1 - multiplier_
+        while start >= 0 and ans[start] == 0:
+            start -= 1
 
-            while index > -len(ans):
-                if ans[index] > 9:
-                    carry = ans[index] // 10
-                    ans[index - 1] += carry
-                    ans[index] = ans[index] % 10
+        return "".join(map(str, reversed(ans[:start + 1])))
 
-                else:
-                    break
 
-                index -= 1
+s = Solution()
 
-        for i in range(len(n2) - 1, -1, -1):
-            for j in range(len(n1) - 1, -1, -1):
+print(s.multiply("2", "3"))
 
-                temp = (ord(n2[i]) - ord('0')) * (ord(n1[j]) - ord('0'))  # *(10**multiplier)
+print(s.multiply("123", "456"))
 
-                add(temp, multiplier)
+"""
 
-                multiplier += 1
-            multiplier = len(n2) - i
+       456
+       123
+       ----
+      1368
+      1120
 
-        return "".join([str(i) for i in ans]).lstrip('0')
+
+"""

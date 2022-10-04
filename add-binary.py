@@ -16,7 +16,7 @@ class Solution:
             else:
                 j = int(j)
 
-            summ = i + j + carry 
+            summ = i + j + carry
 
             if summ == 3:
 
@@ -42,4 +42,4 @@ class Solution:
         return ans
         """
 
-        return bin(int(a, base=2)+int(b, base=2))[2:]
+        return bin(int(a, base=2) + int(b, base=2))[2:]

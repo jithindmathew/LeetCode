@@ -1,13 +1,29 @@
 class Solution:
-    def addToArrayForm(self, A: List[int], K: int) -> List[int]:
+    def addToArrayForm(self, num: List[int], k: int) -> List[int]:
 
-        A[-1] += K
+        i = len(num) - 1
+        carry = 0
 
-        for i in range(len(A) - 1, -1, -1):
-            K, A[i] = divmod(A[i], 10)
-            if i:
-                A[i-1] += K
-        while K:
-            A = [K % 10] + A
-            K //= 10
-        return A
+        while k > 0 or carry > 0:
+            if i < 0:
+                temp = k % 10 + carry
+                carry = temp // 10
+
+                num.insert(0, temp % 10)
+
+                k //= 10
+
+                continue
+
+            temp = num[i] + k % 10 + carry
+            num[i] = temp % 10
+
+            carry = temp // 10
+
+            k //= 10
+            i -= 1
+
+        if carry:
+            num.insert(0, carry)
+
+        return num
