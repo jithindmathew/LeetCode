@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def printVertically(self, s: str) -> List[str]:
 

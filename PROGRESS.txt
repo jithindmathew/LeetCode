@@ -1,6 +1,6 @@
 STUDY PLAN
     ALGORITHM 1 --------------------> DONE
-    ALGORITHM 2 --------------------> DONE
+    ALGORITHM 2 -------------------->
     ALGORITHM 3 -------------------->
 
     PROGRAMMING SKILLS 1 -----------> DONE
