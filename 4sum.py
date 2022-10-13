@@ -1,14 +1,3 @@
-# 18
-
-"""
-Constraints:
-
-1 <= nums.length <= 200
--1000000000 <= nums[i] <= 1000000000
--1000000000 <= target <= 1000000000
-
-"""
-
 from typing import List
 
 

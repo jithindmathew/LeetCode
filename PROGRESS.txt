@@ -4,7 +4,7 @@ STUDY PLAN
     ALGORITHM 3 -------------------->
 
     PROGRAMMING SKILLS 1 -----------> DONE
-    PROGRAMMING SKILLS 2 ----------->
+    PROGRAMMING SKILLS 2 -----------> DONE
     PROGRAMMING SKILLS 3 ----------->
 
     LEETCODE 75 LEVEL 1 ------------>
