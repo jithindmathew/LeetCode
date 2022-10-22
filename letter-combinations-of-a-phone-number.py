@@ -1,41 +1,55 @@
-# 17
+from typing import List
 
-"""
-Constraints:
-
-0 <= digits.length <= 4
-digits[i] is a digit in the range ['2', '9'].
-
-"""
 
 class Solution:
-    def comb(self, lst1: str, lst2: str):
-        ans = []
-        
-        for i in lst1:
-            for j in lst2:
-                ans.append(i + j)
-                
-        return ans
-    
     def letterCombinations(self, digits: str) -> List[str]:
-        mapping = {
-            '2': ['a', 'b', 'c'],
-            '3': ['d', 'e', 'f'],
-            '4': ['g', 'h', 'i'],
-            '5': ['j', 'k', 'l'],
-            '6': ['m', 'n', 'o'],
-            '7': ['p', 'q', 'r', 's'],
-            '8': ['t', 'u', 'v'],
-            '9': ['w', 'x', 'y', 'z']
-        }
-        
-        if digits == "":
+        if len(digits) == 0:
             return []
-        
-        result = mapping[digits[0]]
-        
-        for i in range(1, len(digits)):
-            result = self.comb(result, mapping[digits[i]])
-            
-        return result
+
+        dictt = {
+            "2": ["a", "b", "c"],
+            "3": ["d", "e", "f"],
+            "4": ["g", "h", "i"],
+            "5": ["j", "k", "l"],
+            "6": ["m", "n", "o"],
+            "7": ["p", "q", "r", "s"],
+            "8": ["t", "u", "v"],
+            "9": ["w", "x", "y", "z"]
+        }
+
+        row = 1
+
+        dist = []
+
+        for i in digits:
+            row *= len(dictt[i])
+
+        ans = [[""] * len(digits) for _ in range(row)]
+
+        row_len = row
+
+        for i in digits:
+            row //= len(dictt[i])
+            dist.append(row)
+
+        index = 0
+
+        for i in digits:
+
+            temp = dist[index]
+
+            for j in range(row_len):
+                ans[j][index] = dictt[i][(j // temp) % len(dictt[i])]
+
+            index += 1
+
+        ans2 = []
+
+        for i in ans:
+            ans2.append("".join(i))
+
+        return ans2
+
+
+s = Solution()
+s.letterCombinations("2378")
